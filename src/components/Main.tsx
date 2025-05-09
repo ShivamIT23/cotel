@@ -14,78 +14,79 @@ const cards = [
     imgSrc: "/home/img2.png",
     title: "Nivasa (Girls) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "2No, Ho-Chi Min Sarani, Kolkata- 700070",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img3.png",
     title: "Sienna (Boys) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "51B, Subhashini Ganguly Sarani, Kolkata-700025",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img4.png",
     title: "Shyamananda (Girls) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "32/1A, Shyamananda Road, Kolkata-700025",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img5.png",
     title: "Kankurgachi (Girls) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "P70, Ramkrishna Samadhi Road, Kolkata- 700054",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img6.png",
     title: "Ajanta (Boys) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "93/2 Bokul Bagan Road, Kolkata-700025",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img7.png",
     title: "Northern Park (Boys) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "18B, Balram Bose First Lane, Kolkata- 700020",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img8.png",
     title: "Elgin (Boys) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
+    location: "12C Sarat Bose Road, Kolkata-700020",
     price: "₹15,000",
   },
   {
     imgSrc: "/home/img9.png",
     title: "NBCC (Girls) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location:
+      "CE Block, NBCC, Vibgyor Tower, Newtown, Action Area 1, Kolkata- 700156",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img10.png",
     title: "37A Staywell (Boys) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "37A, Paddapukur Road, Chakraberia, Ballygunge, Kolkata- 700019",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img11.png",
     title: "Newton Suparna Villa ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "Newtown, Mouza, Jatragachi, Purbapara, Kolkata- 700157",
+    price: "₹13,000",
   },
   {
     imgSrc: "/home/img12.png",
     title: "Nivasa (Girls) ",
     near: "500m away from Bhawanipur College",
-    location: "12A,Chakraberia Road, Near Terapanth Bhawan, Kolkata- 700020",
-    price: "₹15,000",
+    location: "2No, Ho-Chi Min Sarani, Kolkata- 700070",
+    price: "₹13,000",
   },
 ];
 
@@ -121,9 +122,20 @@ const chooseList = [
 ];
 
 export default function Main() {
+  const [inputLocation, setInputLocation] = useState("");
+  const [inputGender, setInputGender] = useState("");
+  const [inputCheckIn, setInputCheckIn] = useState("");
+
   const [location, setLocation] = useState("");
-  const [checkIn, setCheckIn] = useState("");
   const [gender, setGender] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [checkIn, setCheckIn] = useState("");
+
+  const handleSearch = () => {
+    setLocation(inputLocation);
+    setGender(inputGender);
+    setCheckIn(inputCheckIn);
+  };
 
   const filteredCards = cards.filter((card) => {
     const matchLocation = location
@@ -136,6 +148,7 @@ export default function Main() {
         ? !titleLower.includes("boy") && !titleLower.includes("girl")
         : titleLower.includes(gender)
       : true;
+
     return matchLocation && matchGender;
   });
 
@@ -143,12 +156,13 @@ export default function Main() {
     <main className="min-h-svh h-fit flex flex-col">
       <section className="h-fit w-full flex justify-center">
         <SearchTab
-          location={location}
-          setLocation={setLocation}
-          checkIn={checkIn}
-          setCheckIn={setCheckIn}
-          gender={gender}
-          setGender={setGender}
+          location={inputLocation}
+          setLocation={setInputLocation}
+          checkIn={inputCheckIn}
+          setCheckIn={setInputCheckIn}
+          gender={inputGender}
+          setGender={setInputGender}
+          handleSearch={handleSearch}
         />
       </section>
       <section className="min-h-[20vh] h-fit grid grid-cols-4 gap-4 gap-y-6 pt-10 sm:px-[5vw] mb-[23px]">
@@ -162,8 +176,8 @@ export default function Main() {
         )}
       </section>
       <Category />
-      <section className="bg-div min-h-[40vh] h-fit flex flex-col gap-[8vh] justify-between pt-[6vh] pb-[10vh] px-[8vw] font-bold text-[16px]">
-        <h2 className="w-full flex justify-center text-4xl font-semibold py-[3vh] text-center">
+      <section className="bg-div min-h-[40vh] h-fit flex flex-col gap-[8vh] justify-between pt-[6vh] pb-[10vh] px-[8vw] font-bold text-[16px] text-[#39302A]">
+        <h2 className="w-full flex justify-center text-4xl lg:text-5xl xl:text-7xl font-semibold py-[3vh] text-center">
           Why Choose Us
         </h2>
         {chooseList.map((card, idx) => {
@@ -192,12 +206,12 @@ function ItemCard({
         alt="locationImg"
         className="w-full aspect-square group-hover:drop-shadow-lg transition object-contain"
       />
-      <h3 className="font-semibold">{card.title}</h3>
+      <h3 className="font-semibold text-[15px]">{card.title}</h3>
       <p>{card.near}</p>
-      <p>{card.location}</p>
+      <p className="line-clamp-2">{card.location}</p>
       <p>
-        Starting from <span className="font-semibold">{card.price}</span>{" "}
-        Onwards
+        Starting from{" "}
+        <span className="font-semibold text-[15px]">{card.price}</span> Onwards
       </p>
     </div>
   );
@@ -221,12 +235,12 @@ function ChooseCard({
       style={{
         backgroundColor: card.bgColor,
       }}
-      className={`w-[90%] flex ${
+      className={`w-[90%] rounded-3xl h-fit md:flex ${
         idx == 1 ? "flex-row-reverse pr-[8%]" : "flex-row pl-[8%]"
-      } mx-auto h-[60vh] gap-4 group`}
+      } mx-auto min-h-[60vh] gap-4 group`}
     >
       <div
-        className={`w-[50%] text-[#39302A] col-span-1 flex flex-col gap-8 ${
+        className={`md:w-[50%] p-4 my-auto h-fit min-h-full col-span-1 flex flex-col gap-8 ${
           idx == 1 ? "items-end text-end" : "items-start"
         } justify-center`}
       >
@@ -236,7 +250,7 @@ function ChooseCard({
           Learn more &#8921;
         </button>
       </div>
-      <div className="w-[50%] col-span-1 flex flex-col gap-8 items-center justify-center p-4">
+      <div className="md:w-[50%] col-span-1 flex flex-col gap-8 items-center justify-center p-4">
         <img
           src={card.imgSrc}
           alt="about"

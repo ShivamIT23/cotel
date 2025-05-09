@@ -5,7 +5,11 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xxs: '340px', // Custom screen for devices >= 340px
+      },
+    },
   },
   plugins: [],
 }

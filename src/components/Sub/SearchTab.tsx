@@ -25,6 +25,7 @@ export default function SearchTab({
   setCheckIn,
   gender,
   setGender,
+  handleSearch,
 }: {
   location: string;
   setLocation: (val: string) => void;
@@ -32,9 +33,10 @@ export default function SearchTab({
   setCheckIn: (val: string) => void;
   gender: string;
   setGender: (val: string) => void;
+  handleSearch: () => void;
 }) {
   return (
-    <div className="flex items-center justify-between py-2 px-2 gap-2 border-gray-300 border-[1px] rounded-full shadow-md bg-white max-w-6xl min-w-[50vw] mx-auto">
+    <div className="flex items-center justify-between py-2 px-2 gap-2 border-gray-300 border-[1px] rounded-full shadow-md bg-white w-fit min-w-[50vw] mx-auto">
       {/* Where */}
       <div className="flex-1 hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-r-[4444px] rounded-l-full">
         <label className="block text-sm font-normal group-hover:text-white text-black">
@@ -95,7 +97,10 @@ export default function SearchTab({
       </div>
 
       {/* Search Button */}
-      <button className=" p-3 rounded-full bg-[#4b4a26] text-white hover:bg-[#3e3d20]">
+      <button
+        onClick={handleSearch}
+        className=" p-3 rounded-full bg-[#4b4a26] text-white hover:bg-[#3e3d20]"
+      >
         <FaSearch />
       </button>
     </div>

@@ -68,10 +68,9 @@ export default function Navbar() {
           className="fixed z-50 top-0 right-0 bg-[linear-gradient(to_bottom,_#FFFFFF,_#F9F1E3)] h-screen w-screen"
         >
           <button className="absolute top-0 right-0 w-20 h-20 p-5">
-            {" "}
             <img src="close.png" alt="" onClick={changeMenu} />
           </button>
-          <div className="my-auto h-screen flex flex-col justify-evenly p-20 text-xl sm:text-2xl md:text-3xl xl:text-4xl">
+          <div className="my-auto w-[100svw] h-screen flex flex-col justify-evenly p-20 text-4xl sm:text-5xl md:text-3xl xl:text-4xl">
             <Link
               className="mx-2 text-gray-800 font-medium hover:underline hover:text-inherit transition-all duration-200 ease-in-out "
               onClick={changeMenu}
@@ -94,7 +93,7 @@ export default function Navbar() {
               About
             </Link>
             <div>
-              <Button>Contact US</Button>
+              <Button>Contact Us <img className="h-4 aspect-auto pl-2" src="/phone.png" /></Button>
             </div>
           </div>
         </motion.div>

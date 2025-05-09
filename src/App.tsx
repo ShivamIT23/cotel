@@ -1,4 +1,4 @@
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import {
   Route,
@@ -11,7 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/About";
-import ContactPage from "./pages/Contact";
+import ResidencePage from "./pages/ResidencePage";
 
 function AppRoutes() {
   const location = useLocation();
@@ -21,7 +21,7 @@ function AppRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/residence/*" element={<ResidencePage />} />
         <Route path="/*" element={<NotFound />} />
         <Route />
       </Routes>
@@ -36,7 +36,7 @@ export default function App() {
         <ScrollToTop />
         <Navbar />
         <AppRoutes />
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );
