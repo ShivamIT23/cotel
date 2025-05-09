@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  font-family: "Kollektif", sans-serif;
+  color: #444823;
+  overflow-x: hidden;
+}
+
+.sans {
+  font-family:  sans-serif, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
