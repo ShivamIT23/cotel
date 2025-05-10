@@ -13,13 +13,13 @@ export default function Category() {
         </div>
         <div className="flex flex-col items-center gap-1 text-3xl sm:text-2xl lg:text-3xl">
           <h3 className=" text-8xl sm:text-5xl xl:text-8xl flex items-center">
-            <Counter to={200} duration={4} />+
+            <Counter to={200} />+
           </h3>
           <p>Rooms</p>
         </div>
         <div className="flex flex-col items-center gap-1 text-3xl sm:text-2xl lg:text-3xl">
           <h3 className=" text-8xl sm:text-5xl xl:text-8xl flex items-center">
-            <Counter to={400} duration={8} />+
+            <Counter to={400} />+
           </h3>
           <p>Guests</p>
         </div>
