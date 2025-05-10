@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Category from "../components/Sub/Category";
 import SearchTab from "./Sub/SearchTab";
+import { useNavigate } from "react-router-dom";
 
 const cards = [
   {
@@ -76,14 +77,14 @@ const cards = [
   },
   {
     imgSrc: "/home/img11.png",
-    title: "Newton Suparna Villa ",
+    title: "Newtown Suparna Villa ",
     near: "500m away from Bhawanipur College",
     location: "Newtown, Mouza, Jatragachi, Purbapara, Kolkata- 700157",
     price: "₹13,000",
   },
   {
     imgSrc: "/home/img12.png",
-    title: "Nivasa (Girls) ",
+    title: "Hari (Girls) ",
     near: "500m away from Bhawanipur College",
     location: "2No, Ho-Chi Min Sarani, Kolkata- 700070",
     price: "₹13,000",
@@ -165,7 +166,7 @@ export default function Main() {
           handleSearch={handleSearch}
         />
       </section>
-      <section className="min-h-[20vh] h-fit grid grid-cols-4 gap-4 gap-y-6 pt-10 sm:px-[5vw] mb-[23px]">
+      <section className="min-h-[20vh] px-[5vw] h-fit grid xxs:grid-cols-2 md:grid-cols-4 gap-4 gap-y-6 pt-10 sm:px-[5vw] mb-[23px]">
         {filteredCards.map((card, idx) => (
           <ItemCard key={idx} card={card} />
         ))}
@@ -199,8 +200,12 @@ function ItemCard({
     price: string;
   };
 }) {
+  const navigate = useNavigate();
   return (
-    <div className="group col-span-1 flex flex-col text-sm font-normal gap-1">
+    <div
+      onClick={() => navigate(`/residence/${card.title.split(" ")[0]}`)}
+      className="group col-span-1 cursor-pointer flex flex-col text-sm font-normal gap-1"
+    >
       <img
         src={card.imgSrc}
         alt="locationImg"

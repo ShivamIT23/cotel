@@ -16,3 +16,8 @@ body {
 .sans {
   font-family:  sans-serif, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
 }
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: black !important;
+}

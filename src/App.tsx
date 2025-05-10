@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/About";
 import ResidencePage from "./pages/ResidencePage";
+import Explore from "./pages/Explore";
 
 function AppRoutes() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function AppRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/exploreResidences" element={<Explore />} />
         <Route path="/residence/*" element={<ResidencePage />} />
         <Route path="/*" element={<NotFound />} />
         <Route />

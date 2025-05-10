@@ -43,10 +43,10 @@ export default function Footer() {
               />
             </div>
             <div className="flex flex-col gap-1 w-full">
-              <label className="text-[#1A1F13] font-medium text-xl">
+              <label className="text-[#1A1F13] flex justify-start text-center font-medium text-xl">
                 Select Your Gender
               </label>
-              <div className="flex gap-4">
+              <div className="flex flex-col items-center xxs:flex-row gap-4">
                 <label className="flex items-center gap-2">
                   <input
                     type="radio"
@@ -90,7 +90,7 @@ export default function Footer() {
         </section>
       </div>
       <footer className="bg-[#FEFEF6] gap-[6%] min-h-[20vh] h-fit flex flex-col md:flex-row justify-between pt-[6vh] md:pb-[3vh] px-[8vw] text-[#0A92C1] font-bold sans text-[16px]">
-        <div className="flex flex-col justify-between w-[45%] mt-[2vh] md:my-[3vh]">
+        <div className="flex items-center md:items-start flex-col justify-between md:w-[45%] mt-[2vh] md:my-[3vh]">
           <p className="cursor-pointer text-[#5C5423]">
             We at Cotel are excited to partner with you in providing exceptional
             experiences for our guests. Together, let's create memorable stays
@@ -100,21 +100,23 @@ export default function Footer() {
             Contact Us <img className="h-4 aspect-auto" src="/phone.png" />
           </Button>
         </div>
-        <div className="flex flex-col justify-between w-[20%] text-[#5C5423] h-full mb-4 md:mb-0 md:my-[1vh]">
+        <div className="flex flex-col justify-between md:w-[20%] text-[#5C5423] h-full mb-4 md:mb-0 md:my-[1vh]">
           <img src="/home/logo1.png" alt="logo-footer" className="h-1/2 " />
-          <div className="max-w-full w-full flex justify-center font-medium text-[14px] gap-2">
+          <div className="max-w-full w-full flex justify-center font-medium text-[12px] xxs:text-sm sm:text-xl md:text-[14px] gap-2">
             <p>COMFORT</p>
             <div className="h-4 w-[1px] bg-[#5C5423]"></div>
             <p>COMMUNITY </p>
             <div className="h-4 w-[1px] bg-[#5C5423]"></div>
             <p>SPACE</p>
           </div>
-          <div className="max-w-full w-full flex text-[16px] justify-center">
+          <div className="max-w-full w-full flex text-[16px] xxs:text-xl sm:text-3xl md:text-[16px] justify-center">
             PREMIUM PG ACCOMODATION
           </div>
         </div>
-        <div className="flex flex-col justify-between w-[30%] gap-3 mt-[2vh] md:my-[3vh] text-[#565656]">
-          <h3 className="text-2xl text-[#39302A]">Contact Us</h3>
+        <div className="flex flex-col justify-start md:w-[30%] gap-3 md:gap-5 lg:gap-8 xl:gap-10 mt-[2vh] md:my-[3vh] text-[#565656]">
+          <h3 className="text-4xl w-full flex justify-center md:justify-start md:text-2xl text-[#39302A]">
+            Contact Us
+          </h3>
           <div className="w-full -px-5 flex gap-2 font-medium">
             <svg
               width="20"
@@ -140,46 +142,48 @@ export default function Footer() {
             </svg>
             <p>12 A, Chakraberia Ln Ballygunge, 700019</p>
           </div>
-          <div className="w-full -px-5 flex gap-2 font-medium">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
-                stroke="#1A1F13"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <div className="flex flex-col xxs:flex-row md:flex-col justify-between gap-3 md:gap-5 lg:gap-8 xl:gap-10 text-[#565656]">
+            <div className="w-full -px-5 flex gap-2 font-medium">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
+                  stroke="#1A1F13"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
 
-            <p>+91 74393 68713</p>
-          </div>
-          <div className="w-full -px-5 flex gap-2 font-medium">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z"
-                stroke="#1A1F13"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              <p>+91 74393 68713</p>
+            </div>
+            <div className="w-full h-fit -px-5 flex gap-2 font-medium">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z"
+                  stroke="#1A1F13"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
 
-            <p>cotel.arihant@gmail.com</p>
+              <p>cotel.arihant@gmail.com</p>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between w-[10%] gap-3 mt-[2vh] md:my-[3vh]text-[#565656]">
+        <div className="flex flex-col justify-between md:w-[10%] gap-3 mt-[2vh] md:my-[3vh]text-[#565656]">
           <h3 className="text-2xl text-[#39302A]">Follow Us</h3>
         </div>
       </footer>

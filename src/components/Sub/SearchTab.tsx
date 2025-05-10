@@ -36,9 +36,9 @@ export default function SearchTab({
   handleSearch: () => void;
 }) {
   return (
-    <div className="flex items-center justify-between py-2 px-2 gap-2 border-gray-300 border-[1px] rounded-full shadow-md bg-white w-fit min-w-[50vw] mx-auto">
+    <div className="flex items-center justify-between py-2 px-2 gap-2 border-gray-300 border-[1px] rounded-full shadow-md bg-white max-w-svw w-fit min-w-[50vw] mx-auto">
       {/* Where */}
-      <div className="flex-1 hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-r-[4444px] rounded-l-full">
+      <div className="w-[35%] hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-r-[4444px] rounded-l-full">
         <label className="block text-sm font-normal group-hover:text-white text-black">
           Where
         </label>
@@ -60,7 +60,7 @@ export default function SearchTab({
       <div className="w-px h-8 bg-gray-300" />
 
       {/* Check In */}
-      <div className="flex-1 hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-[8px]">
+      <div className="w-[35%] hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-[8px]">
         <label className="block text-sm font-normal group-hover:text-white text-black">
           Check in
         </label>
@@ -75,7 +75,7 @@ export default function SearchTab({
       <div className="w-px h-8 bg-gray-300" />
 
       {/* Gender */}
-      <div className="flex-1 hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-l-[4444px] rounded-r-full">
+      <div className="w-[35%] hover:bg-[#444823] hover:text-white py-2 group px-4 rounded-l-[4444px] rounded-r-full">
         <label className="block text-sm font-normal group-hover:text-white text-black">
           Gender
         </label>
@@ -99,7 +99,7 @@ export default function SearchTab({
       {/* Search Button */}
       <button
         onClick={handleSearch}
-        className=" p-3 rounded-full bg-[#4b4a26] text-white hover:bg-[#3e3d20]"
+        className="p-1 md:p-3 rounded-full w-[10%] lg:w-[5%] bg-[#4b4a26] text-white hover:bg-[#3e3d20]"
       >
         <FaSearch />
       </button>

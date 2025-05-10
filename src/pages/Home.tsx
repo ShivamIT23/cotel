@@ -21,7 +21,7 @@ export default function Home() {
         mass: 1,
         stiffness: 100,
         damping: 15,
-      }}className=" h-fit w-full">
+      }} className=" h-fit w-full">
       <Main />
     </motion.div>
   );
